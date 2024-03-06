@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.enforcer32'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+	implementation 'io.github.cdimascio:java-dotenv:5.2.2'
+	implementation 'ch.qos.logback:logback-classic:1.4.6'
+	implementation 'net.dv8tion:JDA:5.0.0-beta.12'
+	implementation 'org.reflections:reflections:0.10.2'
+	implementation group: 'commons-cli', name: 'commons-cli', version: '1.5.0'
+}
+
+test {
+    useJUnitPlatform()
+}
